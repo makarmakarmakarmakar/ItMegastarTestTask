@@ -45,6 +45,17 @@
 - `runserver` - запуск сервера с параметрами, указанными в `/itmegastar/tools/.server`
 - `test` - запуск тестов
 
+## Инструкция к запуску сервиса вручную
+
+Создать виртуальное окружение при помощи `python3 -m venv <venv_name>` и использовать при помощи `source <venv_name>/bin/activate`.
+Инициализировать таблицы в БД и данные в них при помощи единой команды `python manage.py init` или при помощи набора команд:
+1. `python manage.py makemigrations`
+2. `python manage.py migrate`
+3. `python manage.py loaddata testtask.json`
+
+Запустить сервис при помощи команды `python manage.py runserver <host>:<port>`
+
+
 ## Ресурсы
 
 ### Административная панель
